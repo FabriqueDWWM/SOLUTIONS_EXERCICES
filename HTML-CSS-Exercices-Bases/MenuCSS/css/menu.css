@@ -1,0 +1,29 @@
+html, body{
+    padding:0;
+    margin:0;
+    width:100%;
+    height:100%;
+    font-family: 'Black Han Sans', sans-serif;
+}
+a{
+    color:#FF0000;
+}
+a:hover{
+    color:#990000;
+}
+nav li{
+    display:inline-block;
+    padding:8px 14px;
+    font-size:21px;
+}
+nav li ul{
+    visibility:hidden;
+    position:absolute;
+    margin-left:-50px;
+    transition:all .4s ease-in-out;
+    opacity:0;
+}
+nav li:hover ul{
+    visibility:visible;
+    opacity:1;
+}

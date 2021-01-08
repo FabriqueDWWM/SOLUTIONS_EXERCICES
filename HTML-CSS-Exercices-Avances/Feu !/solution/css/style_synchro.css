@@ -1,0 +1,128 @@
+/*
+Réglages de la page
+*/
+html, body{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+/*
+Centrage du contenu de body verticalement et horizontalement
+*/
+body{
+    display: flex;
+    flex-direction: column;/*permet de centrer verticalement en combinaison avec justify-content: center;*/
+    justify-content: center;/*centrage vertical*/
+    align-items: center;/*centrage horizontal*/
+}
+/*
+block contenant les 2 feux
+*/
+main{
+    width: 50%;
+    padding: 3rem;
+    box-sizing: border-box;/*le padding n'agrandira pas main*/
+    background-color: whitesmoke;
+    display: flex;
+    justify-content: space-around;/*répartition horizontale des enfants de main*/
+}
+/*
+block contenant les lampes rouge, verte et orange
+*/
+.feu{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 200px;
+    height: 500px;
+    background-color: black;
+}
+/*
+Lampes rouge, verte et orange
+*/
+.feu_couleur{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 1px solid #646464;
+}
+/**********************************
+ANIMATION DES FEUX
+Voir mecanisme2.png
+***********************************/
+
+/*
+Animation du feu rouge
+*/
+#feu1_rouge{
+    animation-name:feu1_rouge;/*l'élément d'id feu1_rouge est animé par l'animation(@keyframes) feu1_rouge*/
+    animation-duration: 20s;/*l'animation dure 20 secondes au total*/
+    animation-iteration-count: infinite;/*l'animation tourne en boucle indéfiniment*/
+    animation-timing-function: step-start;/*pas de transition entre les états allumé et éteint*/
+ }
+#feu2_rouge{
+    animation-name:feu2_rouge;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-timing-function: step-start;
+}
+@keyframes feu1_rouge {
+    60% {background-color: red;}/*rouge jusqu'à 60%*/
+    100% {background-color: transparent;}/*transparent de 60% à 100%*/
+}
+@keyframes feu2_rouge {
+    10% {background-color: red;}/*rouge jusqu'à 10%*/
+    50% {background-color: transparent;}/*transparent de 10% à 50%*/
+    100% {background-color: red;}/*rouge de 50% à 100%*/
+}
+/*
+Animation du feu orange
+*/
+#feu1_orange{
+    animation-name:feu1_orange;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-timing-function: step-start;
+}
+#feu2_orange{
+    animation-name:feu2_orange;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-timing-function: step-start;
+}
+@keyframes feu1_orange {
+    90% {background-color: transparent;}
+    100% {background-color: orange;}
+}
+@keyframes feu2_orange {
+    40% {background-color: transparent;}
+    50% {background-color: orange;}
+    100% {background-color: transparent;}
+}
+/*
+Animation du feu vert
+*/
+#feu1_vert{
+    animation-name:feu1_vert;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-timing-function: step-start;
+}
+#feu2_vert{
+    animation-name:feu2_vert;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-timing-function: step-start;
+}
+@keyframes feu1_vert {
+    60% {background-color: transparent;}
+    90% {background-color: green;}
+    100% {background-color: transparent;}
+}
+@keyframes feu2_vert {
+    10% {background-color: transparent;}
+    40% {background-color: green;}
+    100% {background-color: transparent;}
+}

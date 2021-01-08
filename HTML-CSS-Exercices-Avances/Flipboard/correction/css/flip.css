@@ -1,0 +1,67 @@
+html,
+body {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    font-family: 'Poiret One', serif;
+}
+
+main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    background-color: #490734;
+    /* Donne la distance du point de fuite */
+    perspective: 600px;
+}
+
+section {
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+}
+
+.polaroid {
+    background: #FFF;
+    width: 200px;
+    height: 250px;
+    text-align: center;
+    margin: 30px;
+    padding: 10px 5px;
+    transform-style: preserve-3d;
+    /* Assure que la transformation 3D sera préservée */
+    transition: all 0.4s ease-in-out;
+    /* Crée l'animation sur le hover */
+}
+
+.polaroid p {
+    margin: 4px;
+}
+
+.polaroid img {
+    width: 150px;
+    height: 200px;
+    border: none;
+    padding: 10px 25px 0;
+}
+
+.polaroid:hover {
+    transform: rotateY(180deg);
+    background: #E9E9E9;
+}
+
+.recto,
+.verso {
+    display: block;
+    position: absolute;
+    background: #FFF;
+    width: 200px;
+    height: 250px;
+    backface-visibility: hidden;
+    /* Masque la face arrière d'une transformation 3D */
+}
+
+.verso {
+    transform: rotateY(180deg);
+}

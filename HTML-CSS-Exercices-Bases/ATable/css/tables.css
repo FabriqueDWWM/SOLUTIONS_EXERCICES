@@ -1,0 +1,49 @@
+html, body{/*réglages généraux pour la page*/
+    padding:0;
+    margin:0;
+    width:100%;
+    height:100%;/*html et body prennent toute la hauteur de la fenêtre, au lieu de s'ajuster à leur contenu*/
+}
+body{
+    display:flex;/*en combinaison avec justify-content et align-items => provoque un centrage horizontal et vertical*/
+    justify-content: center;/*centrage horizontal des enfants*/
+    align-items: center;/*centrage vertical des enfants*/
+    background-color:#000;
+    font-family: 'Do Hyeon', sans-serif;
+}
+/*table*/
+table{
+    width:600px;/*on peut essayer d'autres unités : %, em*/
+    height:400px;/*on peut essayer d'autres unités : %, em*/
+    text-align:center;
+    color:#FFF;
+}
+/* thead */
+table thead th, table tfoot td{
+    text-align:center;
+    padding:10px;
+}
+table thead tr:nth-child(odd){/*les tr impaires dans thead*/
+    background-color:rgb(31, 31, 31);
+    font-size:32px;
+    letter-spacing: 2px;
+}
+table thead tr:nth-child(even){/*les tr paires dans thead*/
+    background-color:rgb(63, 63, 63);
+    font-size:24px;
+    letter-spacing:1px;
+}
+/* tbody */
+table tbody tr:nth-child(even){/*les tr paires dans tbody*/
+    background-color:#999;
+}
+table tbody tr:nth-child(odd){/*les tr impaires dans tbody*/
+    background-color:#CCC;
+}
+/* tfoot */
+table tfoot tr:nth-child(odd){/*les tr impaires dans tfoot*/
+    background-color:rgb(61, 61, 61);
+}
+table tfoot tr:nth-child(even){/*les tr impaires dans tfoot*/
+    background-color:rgb(31, 31, 31);
+}

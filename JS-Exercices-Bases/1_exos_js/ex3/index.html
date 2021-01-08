@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ex 3</title>
+    <style>
+        .maClasse{
+            color: red;
+            font-weight: bold;
+            font-size: 3em;
+        }
+    </style>
+</head>
+<body>
+
+        <!-- 
+           ### EX 3
+
+            - Ajoutez une div dans une page.
+            - Déclarez une variable maDiv et lui affecter la div créée précédemment.
+            - Affichez la variable maDiv dans la console.
+            - En Javascript, ajouter un attribut id à cet élément et lui donner une valeur.
+            - Afficher la variable dans la console.
+            - Créer une classe Css maClasse avec quelques propriétés.
+            - En Javascript, ajouter la classe maClasse à l'élément maDiv.
+        -->
+
+    <div>Hello</div>
+
+    <script>
+
+        var maDiv = document.querySelector("div");
+        console.log(maDiv);
+        //ajout d'un attribut id
+        maDiv.setAttribute("id","test");
+        console.log(maDiv);
+        //ajout d'une classe à l'élément
+        maDiv.classList.add("maClasse"); 
+       
+        console.log(maDiv);
+    </script>
+
+</body>
+</html>

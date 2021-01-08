@@ -1,0 +1,85 @@
+@import url(https://fonts.googleapis.com/css?family=Cherry+Swash);
+body {
+    margin: 0;
+    padding: 0;
+    background-color: lightgrey;
+    font-family: 'Cherry Swash';
+}
+/*header*/
+header nav {
+    background-color: #646464;
+}
+header nav ul {
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    width: 50%;
+    margin: auto;
+    justify-content: flex-end;
+}
+header nav ul li {
+    padding: 10px;
+}
+header nav ul li a {
+    display: block;
+    color: white;
+    text-decoration: none;
+}
+header nav ul li a:hover {
+    color: black;
+}
+/*main*/
+main {
+    width: 50%;
+    margin: auto;
+    padding: 20px;
+    background-color: white;
+}
+main article {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid darkgray;
+}
+main article h2 {
+    text-align: center;
+}
+main article > div {
+    display: flex;
+}
+main article > div > p  {
+    padding: 10px;
+    text-align: justify;
+    margin: auto;
+}
+.img_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main article:nth-of-type(3) div img {
+    float: left;
+    margin: 10px 10px 5px 5px;
+}
+img {
+    max-width: 200px;
+}
+
+@media print {
+    body {
+        background-color: transparent;
+    }
+
+    main {
+        width: 100%;
+        padding: 0;
+    }
+
+    .img_container {
+        display: none;
+    }
+
+    article {
+        page-break-after: always;/*saut de page*/
+    }
+
+}

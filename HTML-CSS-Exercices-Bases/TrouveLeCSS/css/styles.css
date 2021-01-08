@@ -1,0 +1,65 @@
+html, body, section{
+    padding:0;
+    margin:0;
+    height:100%;
+    width:100%;
+    background:#000;
+    color:#FFF;
+    font-family: 'Do Hyeon', sans-serif;
+}
+h1{
+    width:100%;
+    text-align:center;
+}
+section article{
+    float:left;
+    min-width:250px;
+    min-height:250px;
+    background-color:#5f6670;
+    margin:20px;
+    padding:20px;
+}
+section article h2{
+    width:100%;
+    line-height:250px;
+    text-align:center;
+}
+section article:nth-child(1){
+    width:35%;
+}
+section article:nth-child(2){
+    width: 45%;
+    background-color:#679fef;
+}
+section article:nth-child(3){
+    width: 25%;
+    margin-left:20%;
+}
+section article:nth-child(4){
+    width: 25%;
+}
+section article:nth-child(5){
+    width: 25%;
+    float:right;
+}
+section article:nth-child(7){
+    max-width: 30px;
+    min-width:30px;
+    position:absolute;
+    top:50px;
+    right:0;
+    margin:0;
+    background-color: #679fef;
+}
+footer{
+    position:fixed;
+    bottom:0;
+    width:300px;
+    left:50%;
+    margin-left:-150px;
+    background-color:#679fef;
+}
+footer h2{
+    width:100%;
+    text-align: center;
+}

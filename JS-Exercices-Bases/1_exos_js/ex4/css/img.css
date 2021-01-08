@@ -1,0 +1,27 @@
+html, body, section{
+    width:100%;
+    height:100%;
+    padding:0;
+    margin:0;
+}
+section{
+    display:flex;
+}
+article{
+    width:800px;
+    height:400px;
+    margin:auto;
+    box-shadow:1px 1px 6px #000;
+}
+article:hover{
+    cursor: pointer;
+}
+article div{
+    width:800px;
+    height:400px;
+    position:absolute;
+    transition:all .3s ease-in-out;
+}
+.invisible{
+    opacity:0;
+}

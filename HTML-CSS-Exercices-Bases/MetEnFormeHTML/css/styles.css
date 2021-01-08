@@ -1,0 +1,41 @@
+html, body{
+    padding:0;
+    margin:0;
+    height:100%;
+    width:100%;
+    background:#000;
+    color:#FFF;
+    font-family: 'Do Hyeon', sans-serif;
+}
+*{
+    margin:0;
+    padding:0;
+}
+header{
+    background-color: #679fef;
+    height:20vh;
+}
+h1{
+    width:100%;
+    text-align:center;
+}
+nav{
+    background-color: #4b7abc;
+    height:10vh;
+}
+section{
+    background-color: #679fef;
+    height:60vh;
+    width:100%;
+}
+aside{
+    background-color: #4b5f7a;
+    height:60vh;
+    width:19%;
+    float:right;
+}
+footer{
+    background-color: #2d4463;
+    text-align: center;
+    height:10vh;
+}

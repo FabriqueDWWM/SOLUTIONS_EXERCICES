@@ -1,0 +1,61 @@
+html, body{
+    padding:0;
+    margin:0;
+    width:100%;
+    background-color: #333;
+}
+section{
+    display:flex;
+}
+#digital_time{
+    font-size: 3rem;
+    font-weight: bold;
+    justify-content: center;
+    margin: 2rem;
+    color: green;
+    font-family: 'Courier New', Courier, monospace;
+}
+#analog_time{
+    width: 100%;
+    height: 100%;
+}
+#pendule{
+    position: relative;
+    margin:auto;
+    height:500px;
+    width:500px;
+    border-radius:50%;
+    border:3px solid white;
+    display:flex;
+}
+#centre{
+    margin:auto;
+    width:30px;
+    height:30px;
+    border-radius:50%;
+    background-color:#333;
+    z-index: 2;
+}
+.aiguille{
+    transform-origin: 50% 100%;
+    background-color: white;
+    position:absolute;
+    left:50%;
+    bottom:50%;
+}
+#heures{
+    height:160px;
+    width:12px;
+    margin-left:-8px;
+}
+#minutes{
+    height:220px;
+    width:6px;
+    margin-left:-6px;
+}
+#secondes{
+    height:240px;
+    width:2px;
+    margin-left:-3px;
+    background-color: red;
+}
