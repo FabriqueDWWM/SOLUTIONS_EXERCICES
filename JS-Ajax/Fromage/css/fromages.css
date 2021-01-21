@@ -1,0 +1,42 @@
+html, body{
+    padding:0;
+    margin:0;
+    width:100%;
+    height:100%;
+    background:url(../images/fromages.jpg) 50% 50% no-repeat;
+    background-size: cover;
+}
+h1{
+    transform: rotate(-90deg);
+    float:right;
+    transform-origin: 100% 100%;
+}
+section{
+    display:flex;
+    flex-flow:wrap column;
+    align-items: stretch;
+    width:550px;
+    float:right;
+}
+section article{
+    margin:10px;
+    background:#FFF;
+    box-shadow:1px 1px 6px #000;
+    padding:5px 10px;
+    transition:all .1s ease-in-out;
+}
+section article:hover{
+    padding:15px 10px;
+    margin:0px;
+}
+section article h3{
+    margin:5px;
+}
+section article p{
+    margin:5px;
+}
+.etoile{
+    display:inline-block;
+    max-width:32px;
+    max-height:32px;
+}
