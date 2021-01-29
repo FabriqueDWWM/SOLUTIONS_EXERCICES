@@ -1,0 +1,15 @@
+{
+    "principal":[
+        {"nom":"Accueil", "lien":"#accueil"},
+        {"nom":"Articles", "lien":"#articles", "sousmenus":[
+            {"nom":"Génial", "lien":"#cestgenial"},
+            {"nom":"Ca assure à fond", "lien":"#assure"}
+        ]},
+        {"nom":"Contact", "lien":"#contact"}
+    ],
+    "pied":[
+        {"nom":"RGPD", "lien":"#rgpd"},
+        {"nom":"Mentions légales", "lien":"#mentions"},
+        {"nom":"Copyright", "lien":"#copyright"}
+    ]
+}

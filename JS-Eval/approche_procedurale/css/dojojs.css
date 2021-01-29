@@ -1,0 +1,120 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  background: linear-gradient(#e66465, #9198e5);
+  font-family: "Open Sans Condensed", sans-serif;
+}
+main {
+  display: flex;
+  flex-direction: column;
+}
+main > header {
+  display: flex;
+  flex-direction: column;
+  margin: 30px;
+}
+main > header > nav {
+  display: flex;
+  flex-direction: row nowrap;
+  justify-content: flex-end;
+}
+main > header > nav > a {
+  display: block;
+  margin: 0 10px;
+  padding: 5px 15px;
+  transition: all 0.3s ease;
+  background: white;
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+}
+main > header > nav > a:hover {
+  background: none;
+  color: white;
+}
+main > section > aside {
+  display: flex;
+  flex-direction: column;
+}
+main > section > aside > div {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin: 20px auto;
+  background: url("../images/chuck_ok.gif") 40% 50%;
+  transition: all 0.4s ease;
+}
+main > section {
+  display: flex;
+  flex-flow: row no-wrap;
+  margin: 20px 40px;
+}
+main > section > aside {
+  flex: 1;
+  margin: 10px;
+  background-color: white;
+}
+main > section > section {
+  flex: 3;
+  margin: 10px;
+  background-color: white;
+}
+main > section > section > article {
+  margin: 10px;
+}
+main > section > section > article > header {
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1px solid grey;
+  cursor: pointer;
+}
+main > section > section > article > div {
+  margin: 10px;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  visibility: hidden;
+  height: 0px;
+}
+main > section > section > article > header > h2 {
+  width: calc(100% - 50px);
+}
+main > section > section > article > div img {
+  width: 50%;
+}
+h1,
+h2,
+h3 {
+  font-family: "Gelasio", serif;
+}
+h1 {
+  width: 100%;
+  color: white;
+  text-align: center;
+}
+.picto {
+  width: 25px;
+  height: 25px;
+  margin: 5px;
+  margin: auto 5px;
+}
+
+footer {
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+}
+footer a {
+  color: rgba(255, 255, 255, 0.5);
+  transition: all 0.3s ease;
+  margin: 0 10px;
+  padding: 5px 15px;
+}
+footer a:hover {
+  color: white;
+  font-weight: bold;
+}
