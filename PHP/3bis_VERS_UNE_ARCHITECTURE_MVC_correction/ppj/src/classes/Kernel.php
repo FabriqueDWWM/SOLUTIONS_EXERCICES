@@ -20,6 +20,7 @@ class Kernel
         $controllerMethod = $this->router->getControllerMethod(); //on récupère la méthode du controller à appeler
         if (method_exists($this->controller, $controllerMethod)) {
             $this->controller->$controllerMethod(); //appel de la méthode du controller
+            //call_user_func([$this->controller, $controllerMethod]);
         }
     }
 }

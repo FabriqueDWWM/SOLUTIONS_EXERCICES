@@ -5,12 +5,11 @@
         <div class="row">
             <?php foreach ($produits as $produit) : ?>
                 <div class="col-sm-4">
-                    <img src="<?= IMAGES_PATH . "/" . $produit->img_src ?>" class="img-responsive" style="width:100%" alt="Image">
-                    <div class="text-center"><?= $produit->description ?></div>
+                    <div><?= $produit["name"] ?></div>
+                    <img src="<?= IMAGES_PATH . "/" . $produit["img_src"] ?>" class="img-responsive" style="width:100%" alt="Image">
+                    <div class="text-center"><?= $produit["description"] ?></div>
                 </div>
             <?php endforeach; ?>
-
         </div>
     </div>
-</div>
 </div>

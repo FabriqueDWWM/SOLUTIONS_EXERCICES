@@ -29,3 +29,10 @@ define('ROUTES', include SRC . '/config/routes.php');
 define('DATAS_PATH', SRC . '/datas');
 
 define('CLASSES', SRC . "/classes");
+
+// BDD
+
+define('HOST', "localhost");
+define("SQLUSER", "root");
+define("SQLPWD", "");
+define("DBNAME", "ppj");

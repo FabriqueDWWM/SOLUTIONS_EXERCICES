@@ -2,6 +2,9 @@
 
 namespace App;
 
+use App\Bdd;
+use PDO;
+
 class Controller
 {
     public function accueil()
@@ -11,7 +14,11 @@ class Controller
 
     public function produits()
     {
-        $produits = json_decode(file_get_contents(DATAS_PATH . "/produits.json"));
+        // $produits = json_decode(file_get_contents(DATAS_PATH . "/produits.json"));
+        $conn = new PDO("mysql:host=" . HOST . ";dbname=" . DBNAME, SQLUSER, SQLPWD);
+        $req = $conn->prepare("SELECT * FROM produits");
+        $req->execute();
+        $produits = $req->fetchAll(PDO::FETCH_ASSOC);
         $this->render('produits.php', ["produits" => $produits]);
     }
 
@@ -23,7 +30,22 @@ class Controller
 
     public function contact()
     {
-        $this->render('contact.php');
+        $confirmationMessage = null;
+        // var_dump($_POST);
+        if (isset($_POST["nom"]) && isset($_POST["prenom"]) && isset($_POST["email"]) && isset($_POST["message"])) {
+            $confirmationMessage = "Votre message n'a pas pu être envoyé.";
+            $nom = htmlspecialchars($_POST["nom"]);
+            $prenom = htmlspecialchars($_POST["prenom"]);
+            $email = htmlspecialchars($_POST["email"]);
+            $message = htmlspecialchars($_POST["message"]);
+            if ($nom != "" && $prenom != "" && $email != "" && $message != "") {
+                // insertion en bdd
+                // envoi de mail
+                $confirmationMessage = "Votre message a bien été envoyé.";
+            }
+        }
+
+        $this->render('contact.php', ["confirmationMessage" => $confirmationMessage]);
     }
 
     public function about()
