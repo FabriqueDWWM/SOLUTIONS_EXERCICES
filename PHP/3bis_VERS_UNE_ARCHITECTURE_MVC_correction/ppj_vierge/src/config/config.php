@@ -16,7 +16,6 @@ define('IMAGES_PATH', ASSETS_PATH . "/images");
 
 define("SCRIPTS_PATH", ASSETS_PATH . "/js");
 
-define('TITLE', 'Pierre, Paul et Jacquot');
 
 define('TEMPLATE', SRC . "/template");
 
@@ -29,6 +28,10 @@ define('ROUTES', include SRC . '/config/routes.php');
 define('DATAS_PATH', SRC . '/datas');
 
 define('CLASSES', SRC . "/classes");
+
+//personnalisation
+
+define('TITLE', 'Pierre, Paul et Jacquot');
 
 // BDD
 
