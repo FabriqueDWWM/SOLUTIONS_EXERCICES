@@ -16,6 +16,11 @@ class Controller
         $this->render('page_404.php');
     }
 
+    public function test()
+    {
+        $this->render('test.php');
+    }
+
     private function render($template, $params = null)
     {
         //transforme le tableau $params en variables portant le nom des clés du tableau

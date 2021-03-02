@@ -1,6 +1,7 @@
 <?php
 
 return array(
-    "/" => "accueil",
-    "/page404" => "page404",
+    "accueil" => "accueil",
+    "page404" => "page404",
+    "test" => "test",
 );
