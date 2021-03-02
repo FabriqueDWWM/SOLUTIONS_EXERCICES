@@ -3,7 +3,6 @@
 namespace App;
 
 use App\Bdd;
-use PDO;
 
 class Controller
 {
@@ -15,10 +14,10 @@ class Controller
     public function produits()
     {
         // $produits = json_decode(file_get_contents(DATAS_PATH . "/produits.json"));
-        $conn = new PDO("mysql:host=" . HOST . ";dbname=" . DBNAME, SQLUSER, SQLPWD);
+        $conn = new \PDO("mysql:host=" . HOST . ";dbname=" . DBNAME, SQLUSER, SQLPWD);
         $req = $conn->prepare("SELECT * FROM produits");
         $req->execute();
-        $produits = $req->fetchAll(PDO::FETCH_ASSOC);
+        $produits = $req->fetchAll(\PDO::FETCH_ASSOC);
         $this->render('produits.php', ["produits" => $produits]);
     }
 
