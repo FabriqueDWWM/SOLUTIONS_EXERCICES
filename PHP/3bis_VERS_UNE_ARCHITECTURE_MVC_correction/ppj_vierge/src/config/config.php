@@ -38,4 +38,4 @@ define('TITLE', 'Pierre, Paul et Jacquot');
 define('HOST', "localhost");
 define("SQLUSER", "root");
 define("SQLPWD", "");
-define("DBNAME", "ppj");
+define("DBNAME", "gestion_adherents");
